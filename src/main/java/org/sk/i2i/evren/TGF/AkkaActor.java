@@ -1,9 +1,9 @@
 package org.sk.i2i.evren.TGF;
 
 import akka.actor.AbstractActor;
-import org.sk.i2i.evren.TGF.DTO.DataTransaction;
-import org.sk.i2i.evren.TGF.DTO.SmsTransaction;
-import org.sk.i2i.evren.TGF.DTO.VoiceTransaction;
+import org.sk.i2i.evren.DataTransaction;
+import org.sk.i2i.evren.SmsTransaction;
+import org.sk.i2i.evren.VoiceTransaction;
 
 public class AkkaActor extends AbstractActor {
 
