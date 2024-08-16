@@ -25,7 +25,7 @@ public class AkkaActor extends AbstractActor {
 
         dataTransactionsCounter++;
 
-        if(dataTransactionsCounter % 100 == 0) {
+        if(dataTransactionsCounter % 10 == 0) {
             printStats();
         }
 
@@ -35,7 +35,7 @@ public class AkkaActor extends AbstractActor {
 
         voiceTransactionsCounter++;
 
-        if(voiceTransactionsCounter % 100 == 0) {
+        if(voiceTransactionsCounter % 10 == 0) {
             printStats();
         }
 
@@ -45,17 +45,19 @@ public class AkkaActor extends AbstractActor {
 
         smsTransactionsCounter++;
 
-        if(smsTransactionsCounter % 100 == 0) {
+        if(smsTransactionsCounter % 10 == 0) {
             printStats();
         }
 
     }
 
     public void printStats() {
+
         System.out.print(
                 "DATA: " + dataTransactionsCounter +
                 "  ,VOICE: " + voiceTransactionsCounter +
                 "  ,SMS: " + smsTransactionsCounter +
+                "  ,TOTAL: " + (dataTransactionsCounter + voiceTransactionsCounter + smsTransactionsCounter) +
                 "\r");
     }
 }
